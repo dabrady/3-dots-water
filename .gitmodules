@@ -1,0 +1,6 @@
+[submodule "ActivityLog.spoon/lib/uuid"]
+	path = ActivityLog.spoon/lib/uuid
+	url = https://github.com/Tieske/uuid
+[submodule "ActivityLog.spoon/vendors/uuid"]
+	path = ActivityLog.spoon/vendors/uuid
+	url = https://github.com/Tieske/uuid
