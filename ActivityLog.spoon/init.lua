@@ -29,8 +29,8 @@ local watchers =  {}
 ActivityLog.logger = assert(loadfile(ActivityLog.spoonPath..'lib/activity_logger.lua'))(ActivityLog)
 function ActivityLog:init()
   withSpoonInPath(function()
-    local fs = dofile(ActivityLog.spoonPath..'extensions/fs.lua')
-    watchers = fs.loadAllScripts(ActivityLog.spoonPath..'watchers', self.logger)
+    local fs = dofile(ActivityLog.spoonPath..'vendors/lua-utils/hammerspoon/fs.lua')
+    watchers = fs.loadAllFiles(ActivityLog.spoonPath..'watchers', '.lua', self.logger)
   end)
 
   return self
