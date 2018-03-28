@@ -4,3 +4,6 @@
 [submodule "ActivityLog.spoon/vendors/uuid"]
 	path = ActivityLog.spoon/vendors/uuid
 	url = https://github.com/Tieske/uuid
+[submodule "ActivityLog.spoon/vendors/LUActiveRecord"]
+	path = ActivityLog.spoon/vendors/LUActiveRecord
+	url = https://github.com/dabrady/LUActiveRecord
