@@ -7,3 +7,6 @@
 [submodule "ActivityLog.spoon/vendors/LUActiveRecord"]
 	path = ActivityLog.spoon/vendors/LUActiveRecord
 	url = https://github.com/dabrady/LUActiveRecord
+[submodule "ActivityLog.spoon/vendors/lua-utils"]
+	path = ActivityLog.spoon/vendors/lua-utils
+	url = https://github.com/dabrady/lua-utils
