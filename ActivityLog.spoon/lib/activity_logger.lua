@@ -1,11 +1,14 @@
 local Universe = ... -- Expect our globals to be passed in while loading this file.
 local sqlite = require('hs.sqlite3')
 
-local uuidGenerator = require('uuid')
-local macAddress = hs.wifi.interfaceDetails().hardwareAddress
-local function uuid()
-  return uuidGenerator(macAddress)
-end
+local uuid = (function()
+  local uuidGenerator = require('uuid')
+  uuidGenerator.randomseed(math.random(0,2^32))
+  uuidGeneratorSeed = uuidGenerator()
+  return function()
+    return uuidGenerator(uuidGeneratorSeed)
+  end
+)()
 
 local module = {}
 local ACTIVITY_DB_PATH = Universe.spoonPath.."/db/activities.db"
